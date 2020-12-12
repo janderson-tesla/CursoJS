@@ -27,7 +27,8 @@ function sayHi() {
         myName = "Gustavo";
         console.log("Hi" + " " + myName);
     }
-
+     // console.log("Hi" + " " + myName);
+     //let é local não imprime fora erro
 }
 sayHi();
 /*Constantes valor é fixo*/
@@ -57,7 +58,9 @@ function sayHi(){
     const nome = "Jane";
 
     if (true) {
-        const nome = "Janderson";    
+        const nome = "Janderson";
+        console.log(nome);
+        /*imprime Janderson esta dentro do if*/    
     }
     console.log(nome);
     /*Vai imprimir Jane*/
