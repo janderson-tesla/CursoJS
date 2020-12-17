@@ -17,6 +17,7 @@ if (shouldSayHi== true) {
 
 			/*Variables */
 const numberFive = 5;// se for 4 dá false
+const stringFive = "5";
 console.log(typeof numberFive); // number
 
 console.log(typeof stringFive); //string
@@ -52,6 +53,7 @@ console.log(myObject === myOtherObject); //false
 
 const bank = 123;
 const item = 123;
+const item2 = "123"
 const tax= 0.50;
 
 if (bank >= item) {
@@ -61,5 +63,17 @@ if (bank >= item) {
 if (bank <= item) {
 	console.log("You cannot purchase this item");
 }
+if (bank !== item) {
+	console.log("diferente"); //false
+console.log(bank != item2);//false
+console.log(bank !== item2);//true
 
+if (bank !== item + item2) {
+	console.log("I am running"); // imprime
+}
+
+}
+//-----------------------------------
+// Lecture: Nested If Statements AULA 03
+//-----------------------------------
 
