@@ -55,6 +55,7 @@ const bank = 123;
 const item = 123;
 const item2 = "123"
 const tax= 0.50;
+const canSpendMoney = true;
 
 if (bank >= item) {
 	console.log("You can purchase this item");
@@ -74,6 +75,28 @@ if (bank !== item + item2) {
 
 }
 //-----------------------------------
-// Lecture: Nested If Statements AULA 03
+// Lecture: Nested If Statements // Declarações Aninhadas AULA 03
 //-----------------------------------
+
+if (bank >= item) {
+	console.log("ok")
+	if (tax>=0.50) {
+		console.log("Tax amount too high");
+		if (100 ===100) {
+			console.log("kajajajaj"); // o decima dever ser true
+		}
+	if (100 ==100) {
+		console.log("I'm Firing too");
+	}
+	}
+
+}
+
+
+ //-----------------------------------
+// Lecture: Logical Operators Aula 04
+//-----------------------------------
+
+
+
 
