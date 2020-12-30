@@ -56,6 +56,8 @@ const item = 123;
 const item2 = "123"
 const tax= 0.50;
 const canSpendMoney = true;
+const hasCreditCard = true;
+const hasCardLimit = false;
 
 if (bank >= item) {
 	console.log("You can purchase this item");
@@ -97,6 +99,19 @@ if (bank >= item) {
 // Lecture: Logical Operators Aula 04
 //-----------------------------------
 
+if (bank >= item && canSpendMoney == true && item < 150) {
+	console.log("You can purchase this item");
 
+}
 
+if (bank >= item || canSpendMoney == true && item < 150) {
+	console.log("You can purchase this item");
 
+}
+if ((bank >= item) || (canSpendMoney == true && item < 150)) {
+	console.log("You can purchase this item");
+}
+
+if (!hasCreditCard) {
+	console.log("nâo tem ")
+}
