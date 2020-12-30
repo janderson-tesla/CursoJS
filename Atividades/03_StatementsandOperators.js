@@ -19,3 +19,13 @@ if (man === "mortal" && socrates === "man") {
 
 // Extra Credit
 
+cakeIsVanilla = true;
+cakeIsChocolate = true;
+
+if ((cakeIsVanilla || cakeIsChocolate)) {
+	console.log("This cake is either vanilla or chocolate.");
+}
+if(!!cakeIsChocolate){
+	console.log("This cake is not chocolate.");
+	console.log("Therefore, this cake is vanilla.");
+}
