@@ -115,3 +115,30 @@ if ((bank >= item) || (canSpendMoney == true && item < 150)) {
 if (!hasCreditCard) {
 	console.log("nâo tem ")
 }
+if ((bank >= item)||(hasCreditCard && !hasCardLimit)) {
+	console.log("Congrats! You can make this purchase");
+}
+ //-----------------------------------
+// Lecture: Else and Else if Aula 05
+//-----------------------------------
+
+if (bank >= item) {
+	console.log("Congrats : You can pay for this with cash");
+}
+else{
+	if (hasCreditCard && hasCardLimit) {
+		console.log("Congrats : You can pay for this with credit");
+	}
+	console.log("Sorry, you cannot purchase this item");
+	else{
+		console.log("Sorry, can't afford");
+	}
+}
+
+if (bank >= item) {
+	console.log("Congrats, you can pay this item with cash");
+}else if (hasCreditCard && !hasCardLimit) {
+	console.log("You can pay for this with credit")
+}else{
+	console.log("Sorry, you cannot purchase this item");
+}	
