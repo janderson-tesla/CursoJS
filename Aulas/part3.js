@@ -141,4 +141,4 @@ if (bank >= item) {
 	console.log("You can pay for this with credit")
 }else{
 	console.log("Sorry, you cannot purchase this item");
-}	
+}
