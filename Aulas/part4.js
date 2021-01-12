@@ -360,6 +360,7 @@ function dataFormatter(fullName,num){
 		}
 	return formattedData;
 }
+
 // Formats data into object by invoking other functions
 function personFormatter(firstName,lastName,age){
 
@@ -371,3 +372,4 @@ function personFormatter(firstName,lastName,age){
 	return formattedData;
 }
 console.log(personFormatter("Janderson","Barbosa",25));
+
