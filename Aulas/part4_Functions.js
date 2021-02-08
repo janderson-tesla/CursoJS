@@ -348,28 +348,64 @@
 // funções formatnames e dataformatter fora do person funcionam no top  
 
 // Concatenates strings to one string
-function formatNames(arg1,arg2){
-		return arg1 + " " + arg2;
-	}
+// function formatNames(arg1,arg2){
+// 		return arg1 + " " + arg2;
+// 	}
 
-// Formats data into an object, with an age value
-function dataFormatter(fullName,num){
-	const formattedData = {
-		name : fullName,
-		age : num,
-		}
-	return formattedData;
+// // Formats data into an object, with an age value
+// function dataFormatter(fullName,num){
+// 	const formattedData = {
+// 		name : fullName,
+// 		age : num,
+// 		}
+// 	return formattedData;
+// }
+
+// // Formats data into object by invoking other functions
+// function personFormatter(firstName,lastName,age){
+
+// 	const formattedName = formatNames(firstName,lastName);
+
+// 	//return formattedName;
+// 	//return dataFormatter (formattedName,age);
+// 	const formattedData = dataformatter(formattedName,age);
+// 	return formattedData;
+// }
+// console.log(personFormatter("Janderson","Barbosa",25));
+
+
+//-----------------------------------
+// LECTURE : Lecture: Advanced Functions // aula 05
+//-----------------------------------
+
+/* Arrow Functions*/
+
+var sayHi = () =>{
+	console.log("Hi, I'm using an arrow function");
+
 }
 
-// Formats data into object by invoking other functions
-function personFormatter(firstName,lastName,age){
+sayHi();
 
-	const formattedName = formatNames(firstName,lastName);
 
-	//return formattedName;
-	//return dataFormatter (formattedName,age);
-	const formattedData = dataformatter(formattedName,age);
-	return formattedData;
+const multiplier = function (num1 , num2) =>{
+	return num1 * num2;
 }
-console.log(personFormatter("Janderson","Barbosa",25));
 
+console.log(multiplier(5,10));
+
+const users = [
+	{name : "Chris", age = 20},
+	{name : "Janderson", age = 25},
+	{name : "Naiara", age =24}
+
+
+];
+
+//O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+const userNameList = users.map(function(user){
+	return user.name; // retorna somente o paramentro nome
+});
+
+
+console.log(userNameList);
