@@ -460,7 +460,7 @@ console.log(mapUserNames(users);
 // sem chaves não se coloca return 
 const multiplier2 = (x,y) => x*y;
 
-// com chaves  oloca return 
+// com chaves  coloca return 
 const multiplier2 = (x,y) => { return x*y ; };
 
 // com paratenses
@@ -476,6 +476,14 @@ console.log(multiplier2(2,3)); //imprime ok
 sayHi();
 //--------------------------------------------------------------
 
+const numbers =[1,2,3,4,5,6,7,8,9,10];
 
+const filteredNumbers = numbers.filter(function(num){
+	return num === 5;
+	return num % 2 ===0;
+	return num % 2 !==0;
+}); 
+
+console.log(filteredNumbers);	
 
 
