@@ -15,6 +15,7 @@
 // 	console.log("HI" + " " + MyName + " " +lastname);
 // }
 // // não precisa tipar os parametros com C++ string firstname , int age
+
 // function sayBye(firstname,age){
 // 	console.log("Bye" + " " + firstname + "you are" + " " +age);
 // }
@@ -402,10 +403,71 @@ const users = [
 
 ];
 
+
+///O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+
+const userNameList = user.map(function(user){
+ 		return user.name; // retorna somente o paramentro nome
+ 	});
+console.log(userNameList);
+
+
+
+function mapUserNames(myArr){
+
 //O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
-const userNameList = users.map(function(user){
-	return user.name; // retorna somente o paramentro nome
+	const userNameList = myArr.map(function(user){
+		return user.name; // retorna somente o paramentro nome
+	});
+	return userNameList;
+}
+
+function mapUserNames(myArr){
+
+//O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+	const userNameList = myArr.map((user) => {
+		return user.name; // retorna somente o paramentro nome
+	});
+	return userNameList;
+}
+
+const mapUserNames = (myArr) => {
+
+//O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+	const userNameList = myArr.map((user) => {
+		return user.name; // retorna somente o paramentro nome
+	});
+	return userNameList;
+}
+
+const mapUserNames = (myArr) => myArr.map((user){
+
+	return user.name;	
 });
 
+console.log(mapUserNames(users);
 
-console.log(userNameList);
+/*----------------------9:40--------------------------------*/
+
+// sem chaves não se coloca return 
+const multiplier2 = (x,y) => x*y;
+
+// com chaves coloca return 
+const multiplier2 = (x,y) => { return x*y ; };
+
+// com paratenses
+const squarer = (num) => num * num ;
+// sem chaves e sem paratenses
+const squarer = num => num * num ;
+
+const sayHi = () =>{
+	console.log("Say hi");
+}
+
+console.log(multiplier2(2,3)); //imprime ok
+sayHi();
+//--------------------------------------------------------------
+
+
+
+
