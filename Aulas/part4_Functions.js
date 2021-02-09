@@ -440,10 +440,18 @@ const mapUserNames = (myArr) => {
 	return userNameList;
 }
 
-const mapUserNames = (myArr) => myArr.map((user){
+const mapUserNames = (myArr) => myArr.map((user) =>{
 
 	return user.name;	
 });
+
+
+const mapUserNames = (myArr) => 
+ myArr.map((user)=> user.name);
+
+const mapUserNames = (myArr) => 
+ myArr.map((user)=> user.age;
+ 
 
 console.log(mapUserNames(users);
 
@@ -452,7 +460,7 @@ console.log(mapUserNames(users);
 // sem chaves não se coloca return 
 const multiplier2 = (x,y) => x*y;
 
-// com chaves coloca return 
+// com chaves  oloca return 
 const multiplier2 = (x,y) => { return x*y ; };
 
 // com paratenses
