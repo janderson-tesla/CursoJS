@@ -396,9 +396,9 @@ const multiplier = function (num1 , num2) =>{
 console.log(multiplier(5,10));
 
 const users = [
-	{name : "Chris", age = 20},
-	{name : "Janderson", age = 25},
-	{name : "Naiara", age =24}
+	{name : "Chris", age:20},
+	{name : "Janderson", age: 25},
+	{name : "Naiara", age:24}
 
 
 ];
@@ -406,7 +406,7 @@ const users = [
 
 ///O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
 
-const userNameList = user.map(function(user){
+const userNameList = users.map(function(user){
  		return user.name; // retorna somente o paramentro nome
  	});
 console.log(userNameList);
@@ -453,7 +453,7 @@ const mapUserNames = (myArr) =>
  myArr.map((user)=> user.age;
  
 
-console.log(mapUserNames(users);
+console.log(mapUserNames(users));
 
 /*----------------------9:40--------------------------------*/
 
