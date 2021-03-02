@@ -399,11 +399,7 @@ const users = [
 	{name : "Chris", age:20},
 	{name : "Janderson", age: 25},
 	{name : "Naiara", age:24}
-
-
 ];
-
-
 ///O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
 
 const userNameList = users.map(function(user){
@@ -484,6 +480,15 @@ const filteredNumbers = numbers.filter(function(num){
 	return num % 2 !==0;
 }); 
 
-console.log(filteredNumbers);	
+console.log(filteredNumbers);
 
+const doubledNumbers = (num) =>{
+	const numberContainer = [];
+	num.forEach((n)=>{
+		const doubled = n*2;
+		numberContainer.push(doubled);
+	});
+	return numberContainer;
+}
 
+console.log(doubledNumbers(numbers));
