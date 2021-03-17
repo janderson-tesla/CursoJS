@@ -1,6 +1,3 @@
-
-
-
 //Lecture: Introduction to Functions
 //-----------------------------------
 // LECTURE : Introduction to Functions // aula 04 
@@ -156,7 +153,7 @@
 //  const third = squareAndMultiply(4,200);
 
 //  console.log(second);
-   
+
 // // funcoes aninhadas ok
 // function personFormatter(firstName,lastName,age){
 
@@ -175,7 +172,7 @@
 // 	return dataFormatter (formattedName,age);
 // }
 // console.log(personFormatter("Janderson","Barbosa",25));
- 
+
 // aula 04 
 
 //Lecture: Introduction to Functions
@@ -326,7 +323,7 @@
 //  const third = squareAndMultiply(4,200);
 
 //  console.log(second);
-   
+
 // // funcoes aninhadas ok
 // function personFormatter(firstName,lastName,age){
 
@@ -381,114 +378,114 @@
 
 /* Arrow Functions*/
 
-var sayHi = () =>{
-	console.log("Hi, I'm using an arrow function");
+var sayHi = () => {
+    console.log("Hi, I'm using an arrow function");
 
 }
 
 sayHi();
 
 
-const multiplier = function (num1 , num2) =>{
-	return num1 * num2;
-}
+// const multiplier = function(num1, num2) => {
+//     return num1 * num2;
+// }
 
-console.log(multiplier(5,10));
+// console.log(multiplier(5, 10));
 
 const users = [
-	{name : "Chris", age:20},
-	{name : "Janderson", age: 25},
-	{name : "Naiara", age:24}
+    { name: "Chris", age: 20 },
+    { name: "Janderson", age: 25 },
+    { name: "Naiara", age: 24 }
 ];
 ///O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
 
-const userNameList = users.map(function(user){
- 		return user.name; // retorna somente o paramentro nome
- 	});
+const userNameList = users.map(function(user) {
+    return user.name; // retorna somente o paramentro nome
+});
 console.log(userNameList);
 
 
 
-function mapUserNames(myArr){
+function mapUserNames(myArr) {
 
-//O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
-	const userNameList = myArr.map(function(user){
-		return user.name; // retorna somente o paramentro nome
-	});
-	return userNameList;
+    //O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+    const userNameList = myArr.map(function(user) {
+        return user.name; // retorna somente o parâmetro nome
+    });
+    return userNameList;
 }
 
-function mapUserNames(myArr){
+function mapUserNames(myArr) {
 
-//O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
-	const userNameList = myArr.map((user) => {
-		return user.name; // retorna somente o paramentro nome
-	});
-	return userNameList;
+    //O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+    const userNameList = myArr.map((user) => {
+        return user.name; // retorna somente o parâmetro nome
+    });
+    return userNameList;
 }
 
 const mapUserNames = (myArr) => {
 
-//O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
-	const userNameList = myArr.map((user) => {
-		return user.name; // retorna somente o paramentro nome
-	});
-	return userNameList;
+    //O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+    const userNameList = myArr.map((user) => {
+        return user.name; // retorna somente o parâmetro nome
+    });
+    return userNameList;
 }
 
-const mapUserNames = (myArr) => myArr.map((user) =>{
+const mapUserNames = (myArr) => myArr.map((user) => {
 
-	return user.name;	
+    return user.name;
 });
 
 
-const mapUserNames = (myArr) => 
- myArr.map((user)=> user.name);
+const mapUserNames = (myArr) =>
+    myArr.map((user) => user.name);
 
-const mapUserNames = (myArr) => 
- myArr.map((user)=> user.age;
- 
+const mapUserNames = (myArr) =>
+    myArr.map((user) => user.age);
+
 
 console.log(mapUserNames(users));
 
 /*----------------------9:40--------------------------------*/
 
 // sem chaves não se coloca return 
-const multiplier2 = (x,y) => x*y;
+const multiplier2 = (x, y) => x * y;
 
 // com chaves  coloca return 
-const multiplier2 = (x,y) => { return x*y ; };
+const multiplier2 = (x, y) => { return x * y; };
 
 // com paratenses
-const squarer = (num) => num * num ;
+const squarer = (num) => num * num;
 // sem chaves e sem paratenses
-const squarer = num => num * num ;
+const squarer = num => num * num;
 
-const sayHi = () =>{
-	console.log("Say hi");
+const sayHi = () => {
+    console.log("Say hi");
 }
 
-console.log(multiplier2(2,3)); //imprime ok
+console.log(multiplier2(2, 3)); //imprime ok
 sayHi();
 //--------------------------------------------------------------
 
-const numbers =[1,2,3,4,5,6,7,8,9,10];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const filteredNumbers = numbers.filter(function(num){
-	return num === 5;
-	return num % 2 ===0;
-	return num % 2 !==0;
-}); 
+const filteredNumbers = numbers.filter(function(num) {
+    return num === 5;
+    return num % 2 === 0;
+    return num % 2 !== 0;
+});
 
 console.log(filteredNumbers);
 
-const doubledNumbers = (num) =>{
-	const numberContainer = [];
-	num.forEach((n)=>{
-		const doubled = n*2;
-		numberContainer.push(doubled);
-	});
-	return numberContainer;
+const doubledNumbers = (num) => {
+    const numberContainer = [];
+    num.forEach((n) => {
+        const doubled = n * 2;
+        numberContainer.push(doubled);
+    });
+    return numberContainer;
 }
 
 console.log(doubledNumbers(numbers));
