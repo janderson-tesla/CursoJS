@@ -23,7 +23,7 @@ console.log(typeof numberFive); // number
 console.log(typeof stringFive); //string
 
 console.log(numberFive === stringFive);//false
-console.log(numberFive === stringFive); // true
+console.log(numberFive == stringFive); // true
 console.log(numberFive + stringFive); // 55
 
 const stringConversion = parseInt(stringFive);

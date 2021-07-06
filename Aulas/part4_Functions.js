@@ -154,24 +154,7 @@
 
 //  console.log(second);
 
-// // funcoes aninhadas ok
-// function personFormatter(firstName,lastName,age){
 
-// 	function formatNames(arg1,arg2){
-// 		return arg1 + " " + arg2;
-// 	}
-// 	function dataFormatter(fullName,num){
-// 		const formattedData = {
-// 			name : fullName,
-// 			age : num,
-// 		}
-// 		return formattedData;
-// 	}
-// 	const formattedName = formatNames(firstName,lastName);
-// 	//return formattedName;
-// 	return dataFormatter (formattedName,age);
-// }
-// console.log(personFormatter("Janderson","Barbosa",25));
 
 // aula 04 
 
@@ -438,12 +421,14 @@ const mapUserNames = (myArr) => myArr.map((user) => {
     return user.name;
 });
 
+const mapUserNames = (myarr) => myarr.map((user)=>
+        user.name
+    );
 
-const mapUserNames = (myArr) =>
-    myArr.map((user) => user.name);
 
-const mapUserNames = (myArr) =>
-    myArr.map((user) => user.age);
+const mapUserNames = (myArr) => myArr.map((user) => user.name);
+
+const mapUserNames = (myArr) => myArr.map((user) => user.age);
 
 
 console.log(mapUserNames(users));
@@ -476,6 +461,11 @@ const filteredNumbers = numbers.filter(function(num) {
     return num % 2 === 0;
     return num % 2 !== 0;
 });
+//Outra forma sem  o return e sem chaves
+const filteredNumbers =  numbers.filter((num)=>
+        num %2 ==0
+    );
+
 
 console.log(filteredNumbers);
 
@@ -489,3 +479,158 @@ const doubledNumbers = (num) => {
 }
 
 console.log(doubledNumbers(numbers));
+
+//---------25:00------------//
+
+function numberMultplier(x,y){
+    return x*y
+};
+console.log(numberMultplier(5));//retorna NAN
+
+
+function numberMultplier(x,y){
+
+    x = x ||5;
+
+    y = y ||50;
+
+    return x*y
+};
+console.log(numberMultplier());// vazio retorna 50 com valores retorna result com valores
+
+
+function numberMultplier(x = 5,y = 10){
+    // caso o valor não for definido na chamada da função
+    // então sera os valores que estao no parametro
+    //caso console.log(numberMultiplier()) retorna 5 *10
+    return x*y
+};
+console.log(numberMultplier(3,6)) // retorna 3*6
+
+
+
+function stringSplitter(str){
+
+    return str.split("");
+   // O método split() divide uma string em um array de strings de acordo com algum separador; 
+   //por exemplo, o espaço em branco neste caso.
+}
+
+console.log(stringSplitter("Hi, there"));
+// retorna ["Hi", "there"]
+// separa os espaços e valores de array
+
+
+
+function stringSplitter(str = "How are you"){
+
+    return str.split("");
+   // O método split() divide uma string em um array de strings de acordo com algum separador; 
+   //por exemplo, o espaço em branco neste caso.
+}
+
+console.log(stringSplitter());
+// retorna ["How", "are","you"]
+
+const initialString = "HOW ARE YOU?"
+
+
+function stringSplitter(str = initialStrings){
+
+    return str.split("");
+   // O método split() divide uma string em um array de strings de acordo com algum separador; 
+   //por exemplo, o espaço em branco neste caso.
+}
+
+console.log(stringSplitter());
+// retorna ["How", "are","you"]
+
+
+const bankAccount ={
+    canSpendMoney = true,
+    hasCreditCard = true,
+    balance = 100
+}
+
+function canPurchaseItem(price,acct = bankAccount){
+
+    if(acct.canSpendMoney){
+        acct.balance -= price;
+        if(acct.balance <= 0){
+            acct.canSpendMoney = false;
+        }
+        return true;
+    }else{
+        return false;
+    }
+
+
+}
+
+function logAllArguments(x,y,z) {
+    console.log(arguments);  //   no caso imprime todos
+    console.log(arguments[0]); // no caso imprime 4 ou primeiro valor de objeto
+  // body...
+}
+logAllArguments(4,5,6) // cria objeto com esses valores
+
+
+function logAllArguments(x) {
+
+    console.log(x); 
+
+}
+logAllArguments(4,5,6) // imprime apenas o primeiro
+
+
+function logAllArguments(z) {
+    // body...
+    const args = Array.prototype.slice.call(arguments,logAllArguments.length);
+    console.log(args);
+
+}
+logAllArguments(1,2,3,4,5,6);
+
+function multiply(,multiplier,...nums) {
+    return nums.map((n)=> multiplier * n)
+    // body...
+}
+console.log(multiply(10,5,2,3));
+
+//funciona com construtor
+function Dog(years,breed){
+    this.age = years;
+    this.type = breed;
+}
+
+// cria objetos conforme função acima
+const spike = new Dog(3,"Golden Retriever");
+const fido = new Dog(5,"Poodle");
+console.log(spike);
+console.log(fido);
+
+function Dog(years,breed) {
+    const that = this;
+    that.age = years;
+    that.type = breed;
+
+    setInterval(function(){
+        that.age +=1;
+        console.log(that);
+    },1000)
+    // body...
+}
+/*A instrução acima indica que a cada segundo a função " será executada.*/
+function Dog(years,breed) {
+
+    this.age = years;
+    this.type = breed;
+/*O setInterval serve para executar uma função ou instrução várias vezes em um determinado intervalo de tempo.*/
+        setInterval(function(){
+        this.age +=1;
+        console.log(that);
+    },5000/*valor em milesimos*/)
+    // body...
+}
+const fido = new Dog(5,"Poodle");
+const spike = new Dog(3,"Golden Retriever");
